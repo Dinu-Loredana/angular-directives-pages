@@ -1,7 +1,7 @@
 <nav>
   <ul class="pagination">
     <li class="page-item" [ngClass]="{ disabled: currentPage === 0 }">
-      <a class="page-link">Prev</a>
+      <a class="page-link" (click)="currentPage = currentPage - 1">Prev</a>
     </li>
     <li
       class="page-item"
@@ -9,13 +9,13 @@
       *ngFor="let image of images; let i = index"
     >
       <!--use *ngFor on the element that you want to be duplicated-->
-      <a class="page-link">{{ i + 1 }}</a>
+      <a class="page-link" (click)="currentPage = i">{{ i + 1 }}</a>
     </li>
     <li
       class="page-item"
       [ngClass]="{ disabled: currentPage === images.length - 1 }"
     >
-      <a class="page-link">Next</a>
+      <a class="page-link" (click)="currentPage = currentPage + 1">Next</a>
     </li>
   </ul>
 </nav>
