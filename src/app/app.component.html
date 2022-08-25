@@ -19,5 +19,10 @@
     </li>
   </ul>
 </nav>
+
+<div>
+  <h3>{{ images[currentPage].title }}</h3>
+  <img [src]="images[currentPage].url" [alt]="images[currentPage].title" />
+</div>
 <!-- [ngClass]="getClass()"; 
     the fn could return a string or an array of strings - classes -->
