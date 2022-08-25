@@ -1,5 +1,10 @@
 # AngularDirectivesPages
 
+<ng-container>
+By default, can't apply multiple structural directives to one DOM element. When uou need to use more than 1, use ng-container element (same as fragment in React) to add the structural directive. It doesn't add new element to the DOM.
+<!-- [ngClass]="getClass()"; 
+    the fn could return a string or an array of strings - classes -->
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.8.
 
 ## Development server

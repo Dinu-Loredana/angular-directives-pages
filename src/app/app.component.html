@@ -3,14 +3,16 @@
     <li class="page-item" [ngClass]="{ disabled: currentPage === 0 }">
       <a class="page-link" (click)="currentPage = currentPage - 1">Prev</a>
     </li>
-    <li
-      class="page-item"
-      [ngClass]="{ active: i === currentPage }"
-      *ngFor="let image of images; let i = index"
-    >
-      <!--use *ngFor on the element that you want to be duplicated-->
-      <a class="page-link" (click)="currentPage = i">{{ i + 1 }}</a>
-    </li>
+    <ng-container *ngFor="let image of images; let i = index">
+      <li
+        class="page-item"
+        [ngClass]="{ active: i === currentPage }"
+        *ngIf="checkWindowIndex(i)"
+      >
+        <!--use *ngFor on the element that you want to be duplicated-->
+        <a class="page-link" (click)="currentPage = i">{{ i + 1 }}</a>
+      </li>
+    </ng-container>
     <li
       class="page-item"
       [ngClass]="{ disabled: currentPage === images.length - 1 }"
@@ -24,5 +26,3 @@
   <h3>{{ images[currentPage].title }}</h3>
   <img [src]="images[currentPage].url" [alt]="images[currentPage].title" />
 </div>
-<!-- [ngClass]="getClass()"; 
-    the fn could return a string or an array of strings - classes -->
