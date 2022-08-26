@@ -5,7 +5,7 @@ import { Directive, ElementRef, Input } from '@angular/core';
 })
 export class ClassDirective {
   constructor(private element: ElementRef) {}
-  @Input() set textColor(choseColor: string) {
+  @Input('appClass') set textColor(choseColor: string) {
     //this.element.nativeElement.style.color = 'orange';
     this.element.nativeElement.style.color = choseColor;
   }

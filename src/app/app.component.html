@@ -23,7 +23,8 @@
 </nav>
 
 <div>
-  <h3 appClass [textColor]="'green'">{{ images[currentPage].title }}</h3>
+  <h3 [appClass]="'green'">{{ images[currentPage].title }}</h3>
+  <!-- <h3 appClass [textColor]="'green'">{{ images[currentPage].title }}</h3>  // same thing-->
   <img [src]="images[currentPage].url" [alt]="images[currentPage].title" />
 </div>
 
