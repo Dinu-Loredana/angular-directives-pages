@@ -22,14 +22,14 @@
   </ul>
 </nav>
 
-<!-- <div>
-  <h3>{{ images[currentPage].title }}</h3>
+<div>
+  <h3 appClass [textColor]="'green'">{{ images[currentPage].title }}</h3>
   <img [src]="images[currentPage].url" [alt]="images[currentPage].title" />
-</div> -->
+</div>
 
-<div [ngSwitch]="currentPage">
+<!-- <div [ngSwitch]="currentPage">
   <p *ngSwitchCase="0">Current page is 0</p>
   <p *ngSwitchCase="1">Current page is 1</p>
   <p *ngSwitchCase="3">Current page is 3</p>
   <p *ngSwitchDefault>Default page: unknown</p>
-</div>
+</div> -->
