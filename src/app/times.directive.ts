@@ -12,7 +12,9 @@ export class TimesDirective {
     //whenever 'apptimes' property is set on an element, we're going to set  a function called 'render'.
     this.viewContainer.clear();
     for (let i = 0; i < times; i++) {
-      this.viewContainer.createEmbeddedView(this.templateRef, {});
+      this.viewContainer.createEmbeddedView(this.templateRef, {
+        index: i,
+      });
     }
   }
 }
